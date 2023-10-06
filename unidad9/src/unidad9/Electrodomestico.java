@@ -101,7 +101,12 @@ public class Electrodomestico {
 		if(this.consumo == 'E') { precioFinal = precioFinal + 30; }
 		if(this.consumo == 'F') { precioFinal = precioFinal + 10; }
 		
-		if(this.peso >) { precioFinal = precioFinal + 100; }
+		if(this.peso >= 0 || this.peso <= 19) { precioFinal = precioFinal + 10; }
+		if(this.peso >= 20 || this.peso <= 49) { precioFinal = precioFinal + 50; }
+		if(this.peso >= 50 || this.peso <= 79) { precioFinal = precioFinal + 80; }
+		if(this.peso >= 80) { precioFinal = precioFinal + 100; }
+		
+		return precioFinal;
 	}
 	
 }
