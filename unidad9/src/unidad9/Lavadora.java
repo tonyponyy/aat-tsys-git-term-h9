@@ -22,9 +22,6 @@ public class Lavadora extends Electrodomestico{
 		return carga;
 	}
 	
-	public double getCARGA() {
-		return CARGA;
-	}
 	@Override
 	public double precioFinal() {
 		double total = 0;

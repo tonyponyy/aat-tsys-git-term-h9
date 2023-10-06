@@ -4,7 +4,7 @@ public class main_app {
 	public static void main(String[] args) {
 		Electrodomestico arr[] = new Electrodomestico[10];
 		
-		Lavadora a = new Lavadora(3.9, 5, "blanco", 'A', 2.5);
+		Lavadora a = new Lavadora(3.9,"blanco",'A', 2.5);
 		Televisor b = new Televisor(4, "negro", 'A', 6,true,30);
 		
 		for (int i = 0; i<arr.length;i++) {
@@ -29,7 +29,7 @@ public class main_app {
 		
 		System.out.println("Total lavadora: " + totalLavadora );
 		System.out.println("Total televisor: " + totalTelevision );
-		System.out.println("Total: " + totalLavadora + totalTelevision);
+		System.out.println("Total: " + (totalLavadora + totalTelevision));
 	}
 	
 
