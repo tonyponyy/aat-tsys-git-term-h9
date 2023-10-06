@@ -5,27 +5,31 @@ public class main_app {
 		Electrodomestico arr[] = new Electrodomestico[10];
 		
 		Lavadora a = new Lavadora(3.9, 5, "blanco", 'A', 2.5);
-		Television b = new Television(4, 6, "negro", 'A',30,true);
+		Televisor b = new Televisor(4, "negro", 'A', 6,true,30);
 		
-		arr[0] = a;
+		for (int i = 0; i<arr.length;i++) {
+			arr[i] = b;
+			if (i>4) {
+				arr[i] = a;
+			}
+		}
+		
 		
 		double totalLavadora = 0;
 		double totalTelevision = 0;
 		
 		for (int i = 0; i<arr.length;i++) {
-			if (arr[i].isInstance(Lavadora)) {
-				
+			if (arr[i] instanceof Televisor) {
+				totalTelevision = totalTelevision + arr[i].precioFinal();
 			}
 			else {
-				
+				totalLavadora = totalLavadora + arr[i].precioFinal();
 			}
 		}
-		System.out.println("first commit");
-
-		System.out.println("comentario de Ainara");
 		
-
-		//Mi comentario --Sergi
+		System.out.println("Total lavadora: " + totalLavadora );
+		System.out.println("Total televisor: " + totalTelevision );
+		System.out.println("Total: " + totalLavadora + totalTelevision);
 	}
 	
 
